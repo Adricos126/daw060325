@@ -12,23 +12,42 @@ public class GestorTiendaTest {
      void calcularDescuento(){
 
         assertEquals(0,gestor.calcularDescuento(0.04,100));
-        assertEquals(100 * 0.05,gestor.calcularDescuento(100,7));
 
+
+    }
+
+    @Test
+
+    void calcularDescuento2(){
+
+        assertEquals(100 * 0.05,gestor.calcularDescuento(100,7));
     }
 
     @Test
     void categorizarProducto(){
-
         assertEquals("Economico, ",gestor.categorizarProducto(10));
-        assertEquals("Estandar ",gestor.categorizarProducto(20));
-        assertEquals("Premium", gestor.categorizarProducto(100));
 
     }
 
     @Test
-    void buscarProducto(){
+    void categorizarProducto2(){
+        assertEquals("Estandar ",gestor.categorizarProducto(20));
+    }
+
+    @Test
+    void categorizarProducto3(){
+        assertEquals("Premium", gestor.categorizarProducto(100));
+    }
 
 
+
+    @Test
+    void buscarProductoNoExistente(){
+
+        String[] inventario = {"Producto A", "Producto B"};
+        String producto = "Producto C";
+
+        assertEquals(null, gestor.buscarProducto(inventario, producto),"No existe");
 
     }
 
