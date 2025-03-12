@@ -47,7 +47,7 @@ public class GestorTiendaTest {
         String[] inventario = {"Producto A", "Producto B"};
         String producto = "Producto C";
 
-        assertEquals(null, gestor.buscarProducto(inventario, producto),"No existe");
+        assertEquals(null, gestor.buscarProducto(inventario, producto),"Nop existe");
 
     }
 
