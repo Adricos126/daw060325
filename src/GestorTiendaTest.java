@@ -9,10 +9,22 @@ public class GestorTiendaTest {
     @Test
      void calcularDescuento(){
 
-
-
         assert equals(gestor.calcularDescuento(0.04,100));
         assert equals(gestor.calcularDescuento(100,7));
+
+    }
+
+    @Test
+    void categorizarProducto(){
+
+        assert equals("Economico, "gestor.categorizarProducto(5));
+        assert equals(""gestor.categorizarProducto(5));
+
+
+    }
+
+    @Test
+    void buscarProducto(){
 
 
 
