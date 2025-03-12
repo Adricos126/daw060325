@@ -1,6 +1,8 @@
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class GestorTiendaTest {
 
     private GestorTienda gestor = new GestorTienda();
@@ -9,17 +11,17 @@ public class GestorTiendaTest {
     @Test
      void calcularDescuento(){
 
-        assert equals(gestor.calcularDescuento(0.04,100));
-        assert equals(gestor.calcularDescuento(100,7));
+        assertEquals(0,gestor.calcularDescuento(0.04,100));
+        assertEquals(100 * 0.05,gestor.calcularDescuento(100,7));
 
     }
 
     @Test
     void categorizarProducto(){
 
-        assert equals("Economico, "gestor.categorizarProducto(5));
-        assert equals(""gestor.categorizarProducto(5));
-
+        assertEquals("Economico, ",gestor.categorizarProducto(10));
+        assertEquals("Estandar ",gestor.categorizarProducto(20));
+        assertEquals("Premium", gestor.categorizarProducto(100));
 
     }
 
