@@ -9,8 +9,13 @@ public class GestorTiendaTest {
     @Test
      void calcularDescuento(){
 
-        assert equals(gestor.calcularDescuento(100,4));
-        assert equals(5.0gestor.calcularDescuento(100,7));
+
+
+        assert equals(gestor.calcularDescuento(0.04,100));
+        assert equals(gestor.calcularDescuento(100,7));
+
+
+
     }
 
 }
